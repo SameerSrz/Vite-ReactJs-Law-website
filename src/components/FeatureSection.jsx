@@ -3,7 +3,7 @@ import React from 'react'
 const FeatureSection = () => {
 
     const post = {
-        image: 'src/assets/image-1.jpg', // Replace with actual image path
+        image: 'assets/image-1.jpg', // Replace with actual image path
         title: 'Expert Tax Advisory Services',
         description: 'Specialized in providing comprehensive tax planning and legal representation to ensure optimal financial outcomes. From personal tax issues to complex corporate tax strategies, we deliver tailored solutions to meet your needs.',
       };

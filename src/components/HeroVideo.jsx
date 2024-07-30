@@ -8,7 +8,7 @@ const HeroVideo = () => {
       muted
       loop
     >
-      <source src="src/assets/heroVideo.mp4" type="video/mp4" />
+      <source src="assets/heroVideo.mp4" type="video/mp4" />
     </video>
   );
 };

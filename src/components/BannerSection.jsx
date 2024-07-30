@@ -25,7 +25,7 @@ const BannerSection = () => {
         </div>
       </div>
       <img
-        src="src/assets/image-2.jpg"
+        src="assets/image-2.jpg"
         width="550"
         height="550"
         alt="Hero"
