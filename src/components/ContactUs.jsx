@@ -4,9 +4,10 @@ import { FaAddressBook } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import {PageTitle} from './PageTitle';
 
+
 const ContactUs = () => {
   return (
-    <div className="p-6 max-w-6xl mx-auto">
+    <div id='contact' className="p-6 max-w-6xl mx-auto">
       <PageTitle section="Contact Us" heading="Get in Touch with Us">
         Whether you have questions, need support, or want to explore partnership opportunities, we are here to help. Complete the form below, and we'll get back to you within 24 hours.
       </PageTitle>

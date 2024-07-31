@@ -5,6 +5,7 @@ import { animationStart, reveal } from '../utils/Animation'
 const HeroText = () => {
   return (
     <motion.div
+     id='home'
      layout
      initial={{ height: 0}}
      animate={{ height: "unset"}}
