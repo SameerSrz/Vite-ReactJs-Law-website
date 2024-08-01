@@ -7,6 +7,8 @@ import Footer from '../components/Footer'
 import FeatureSection from '../components/FeatureSection'
 import Services from '../components/Services'
 import BannerSection from '../components/BannerSection'
+import TeamSection from '../components/TeamSection'
+
 
 
 const Home = () => {
@@ -18,6 +20,7 @@ const Home = () => {
       <Services/>
       <FeatureSection/>
       <BannerSection/>
+      <TeamSection/>
       <ContactUs/>
       <Footer/>
     </div>

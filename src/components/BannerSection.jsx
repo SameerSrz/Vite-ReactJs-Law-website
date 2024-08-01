@@ -10,7 +10,7 @@ const BannerSection = () => {
      initial={{ height: 0}}
      animate={{ height: "unset"}}
      transition={{ delay: animationStart, duration: 1}}
-     className="w-full py-8 md:py-18 lg:py-24 xl:py-40 text-black">
+     className="w-full py-8 md:py-18 lg:py-24 xl:py-20 text-black">
     <motion.div
      variants={reveal}
      initial="hiddenVariant"
@@ -30,8 +30,8 @@ const BannerSection = () => {
           </div>
           <div className="flex flex-col gap-2 sm:flex-row">
             <a
-              href="#"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-gray-800 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-300 disabled:pointer-events-none disabled:opacity-50"
+              href="#contact"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-gray-800 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900 disabled:pointer-events-none disabled:opacity-50"
             >
               Contact Us
             </a>

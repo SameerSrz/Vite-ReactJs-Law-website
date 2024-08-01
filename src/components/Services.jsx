@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { animationStart, reveal } from '../utils/Animation';
+import { reveal } from '../utils/Animation';
 
 // Define scroll animation variants
 const textVariants = {
@@ -9,6 +9,9 @@ const textVariants = {
 };
 
 const Services = () => {
+
+  const animationStart = 0.5;
+  
   return (
     <motion.section
       id='services'
