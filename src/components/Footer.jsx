@@ -68,7 +68,7 @@ const Footer = ({ title, description, socials, menus, copyright }) => {
 }
 
 Footer.defaultProps = {
-    title: "Hafiz Legal Solutions",
+    title: "Legalinks Law Firm",
     description:
       "Providing expert tax advice and strategic planning to help individuals and businesses navigate complex tax regulations and optimize their financial outcomes. Our goal is to ensure compliance, minimize liabilities, and achieve financial peace of mind through personalized legal solutions.",
     menus: [
@@ -111,7 +111,7 @@ Footer.defaultProps = {
     ],
     copyright: (
       <>
-        Copyright © {year} Hafiz Legal Solutions{" "}
+        Copyright © {year} Legalinks Law Firm{" "}
       </>
     ),
   };

@@ -8,9 +8,10 @@ const TeamSection = () => {
 
     const teamData = [
         {
-          img: "assets/team-1.jpg",
+          img: "assets/team2.jpeg",
           name: "Hafiz Waseem Riaz",
-          position: "Advocate - LLB",
+          designation: "Founder of Legalinks",
+          position: "Advocate High Court",
           socials: [
             {
               color: "light-blue",
@@ -30,9 +31,10 @@ const TeamSection = () => {
           ],
         },
         {
-          img: "assets/team-2.jpg",
-          name: "Romina Hadid",
-          position: "Marketing Specialist",
+          img: "assets/team1.jpeg",
+          name: "Mian Sami Ullah",
+          designation: "Co-Founder of Legalinks",
+          position: "Advocate High Court",
           socials: [
             {
               color: "light-blue",
@@ -54,6 +56,7 @@ const TeamSection = () => {
         {
           img: "assets/team-3.jpg",
           name: "Alexa Smith",
+          designation: "Co-Founder of Legalinks",
           position: "UI/UX Designer",
           socials: [
             {
@@ -76,6 +79,7 @@ const TeamSection = () => {
         {
           img: "assets/team-4.png",
           name: "Jenna Kardi",
+          designation: "Co-Founder of Legalinks",
           position: "Founder and CEO",
           socials: [
             {
@@ -107,11 +111,12 @@ const TeamSection = () => {
           Our team of experienced legal professionals is dedicated to providing top-notch legal support and advocacy. With a wealth of expertise in various areas of law, we are committed to delivering insightful and effective solutions to meet your legal needs. Whether you require guidance on complex legal matters or strategic advice, our attorneys bring a deep understanding of the law and a client-focused approach to ensure your success.
         </PageTitle>
         <div className="mt-24 grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-4">
-          {teamData.map(({ img, name, position, socials }) => (
+          {teamData.map(({ img, name, designation, position, socials }) => (
             <TeamCard
               key={name}
               img={img}
               name={name}
+              designation={designation}
               position={position}
               socials={
                 <div className="flex items-center justify-center gap-2">

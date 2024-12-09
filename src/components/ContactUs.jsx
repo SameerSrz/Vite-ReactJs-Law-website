@@ -26,7 +26,7 @@ const ContactUs = () => {
             </div>
             <div className="flex items-center space-x-3">
               <FaAddressBook />
-              <p className="text-gray-700">123 Street Name, Lahore, Pakistan</p>
+              <p className="text-gray-700">5-A Kapoor Thallah House, Lake Road, Old Anarkali, Lahore</p>
             </div>
           </div>
         </div>
