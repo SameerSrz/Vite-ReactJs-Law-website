@@ -1,96 +1,68 @@
 import React from 'react';
+import { FaFileAlt, FaTrademark, FaBuilding, FaChartLine } from 'react-icons/fa';
 
 const Services = () => {
+  const services = [
+    {
+      icon: <FaFileAlt className="text-blue-600 text-3xl" />,
+      title: "Income Tax Registration",
+      description: "Expert guidance to register for income tax quickly and efficiently."
+    },
+    {
+      icon: <FaFileAlt className="text-blue-600 text-3xl" />,
+      title: "Income Tax Return Filing",
+      description: "Accurate and hassle-free filing of income tax returns for compliance."
+    },
+    {
+      icon: <FaTrademark className="text-blue-600 text-3xl" />,
+      title: "Trademark Registration",
+      description: "Protect your brand identity by registering your trademark with ease."
+    },
+    {
+      icon: <FaBuilding className="text-blue-600 text-3xl" />,
+      title: "Company Registration",
+      description: "Streamline the process of setting up your business with our expert help."
+    },
+    {
+      icon: <FaChartLine className="text-blue-600 text-3xl" />,
+      title: "PSEB Registration",
+      description: "Assistance with Pakistan Software Export Board registration for IT companies."
+    },
+    {
+      icon: <FaChartLine className="text-blue-600 text-3xl" />,
+      title: "Sales Tax",
+      description: "Expert help in managing and filing sales tax to ensure compliance."
+    }
+  ];
+
   return (
-    <section
-      id="services"
-      className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
-    >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm text-gray-700">
-              Our Services
-            </div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Comprehensive Tax Solutions
-            </h2>
-            <p className="max-w-4xl text-gray-600 md:text-xl lg:text-base">
-              Legalinks Law Firm offers a wide range of tax-related services to
-              individuals and businesses, including tax filing, compliance, and
-              advisory. Our team is dedicated to providing efficient and tailored
-              solutions to meet your financial needs.
-            </p>
-          </div>
+    <section id="services" className="w-full py-16 bg-gradient-to-b from-gray-50 to-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-4">
+            Our Services
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Comprehensive Tax Solutions
+          </h2>
+          <p className="max-w-2xl mx-auto text-gray-600 text-lg">
+            TaxLogicx Law Firm offers a wide range of tax-related services to individuals and businesses.
+          </p>
         </div>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">Income Tax Registration</h3>
-            <p className="text-gray-600">
-              Get expert guidance to register for income tax quickly and efficiently.
-            </p>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">Income Tax Return Filing</h3>
-            <p className="text-gray-600">
-              Accurate and hassle-free filing of income tax returns for compliance.
-            </p>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">Trademark Registration</h3>
-            <p className="text-gray-600">
-              Protect your brand identity by registering your trademark with ease.
-            </p>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">Company Registration</h3>
-            <p className="text-gray-600">
-              Streamline the process of setting up your business with our expert help.
-            </p>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">PSEB Registration</h3>
-            <p className="text-gray-600">
-              Assistance with Pakistan Software Export Board registration for IT companies.
-            </p>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">Sale’s Tax</h3>
-            <p className="text-gray-600">
-              Expert help in managing and filing sales tax to ensure compliance.
-            </p>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">PRA Return</h3>
-            <p className="text-gray-600">
-              Accurate filing of Punjab Revenue Authority returns for businesses.
-            </p>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">PRA Registration</h3>
-            <p className="text-gray-600">
-              Ensure seamless registration with the Punjab Revenue Authority.
-            </p>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">Firm Registration</h3>
-            <p className="text-gray-600">
-              Simplify the process of registering your firm with our professional services.
-            </p>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">Call Center Registration</h3>
-            <p className="text-gray-600">
-              Specialized services to register your call center effortlessly.
-            </p>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="text-xl font-bold">Software House Registration</h3>
-            <p className="text-gray-600">
-              Facilitate your software house registration with ease and expertise.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div 
+              key={index}
+              className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+            >
+              <div className="mb-4">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-gray-800">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

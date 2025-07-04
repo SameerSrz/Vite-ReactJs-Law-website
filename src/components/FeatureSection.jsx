@@ -1,35 +1,59 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import image1 from '../../public/assets/image-1.jpg';
 
 const FeatureSection = () => {
   const post = {
-    image: image1, // Replace with actual image path
+    image: image1,
     title: 'Expert Tax Advisory Services',
     description: 'Specialized in providing comprehensive tax planning and legal representation to ensure optimal financial outcomes. From personal tax issues to complex corporate tax strategies, we deliver tailored solutions to meet your needs.',
+    cta: 'Schedule Consultation'
   };
 
   return (
-    <div
-      className="relative ml-3 mt-9 mr-3 mb-4 text-white bg-cover bg-no-repeat bg-center rounded-lg"
-      style={{ backgroundImage: `url(${post.image})` }}
+    <motion.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="relative mx-4 my-12 rounded-xl overflow-hidden shadow-xl"
     >
-      <div className="grid md:grid-cols-2">
-        <div className="relative p-4 md:p-6 md:pr-0">
-          <h1
-            className="text-3xl md:text-4xl pt-11 font-bold"
-            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}
-          >
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={post.image} 
+          alt="Tax advisory services"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 p-8 md:p-12 lg:p-16 max-w-2xl">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
-          <p
-            className="text-lg md:text-xl mt-4"
-            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' }}
-          >
+          <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
             {post.description}
           </p>
-        </div>
+          <a href="#contact">
+            <button className="px-8 py-3 bg-white text-blue-800 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-300 shadow-lg hover:shadow-xl">
+              {post.cta}
+            </button>
+          </a>
+        </motion.div>
       </div>
-    </div>
+
+      {/* Accent element */}
+      {/* <div className="absolute bottom-0 left-0 h-1 w-24 bg-yellow-400"></div> */}
+    </motion.div>
   );
 };
 

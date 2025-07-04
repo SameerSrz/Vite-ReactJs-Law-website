@@ -1,30 +1,31 @@
-import React from 'react'
-import HeroText from '../components/HeroText'
-import HeroVideo from '../components/HeroVideo'
-import HeroImages from '../components/HeroImages'
-import ContactUs from '../components/ContactUs'
-import Footer from '../components/Footer'
-import FeatureSection from '../components/FeatureSection'
-import Services from '../components/Services'
-import BannerSection from '../components/BannerSection'
-import TeamSection from '../components/TeamSection'
+import React, { lazy, Suspense } from 'react';
+import LoadingSpinner from '../components/LoadingSpinner';
 
-
+// Lazy load components for better performance
+const HeroText = lazy(() => import('../components/HeroText'));
+const HeroVideo = lazy(() => import('../components/HeroVideo'));
+const Services = lazy(() => import('../components/Services'));
+const FeatureSection = lazy(() => import('../components/FeatureSection'));
+const BannerSection = lazy(() => import('../components/BannerSection'));
+const TeamSection = lazy(() => import('../components/TeamSection'));
+const ContactUs = lazy(() => import('../components/ContactUs'));
+const Footer = lazy(() => import('../components/Footer'));
 
 const Home = () => {
   return (
-    <div>
-      <HeroText/>
-      {/* <HeroImages/> */}
-      <HeroVideo/>
-      <Services/>
-      <FeatureSection/>
-      <BannerSection/>
-      <TeamSection/>
-      <ContactUs/>
-      <Footer/>
+    <div className="overflow-hidden">
+      <Suspense fallback={<LoadingSpinner />}>
+        <HeroText/>
+        <HeroVideo/>
+        <Services/>
+        <FeatureSection/>
+        <BannerSection/>
+        <TeamSection/>
+        <ContactUs/>
+        <Footer/>
+      </Suspense>
     </div>
   )
 }
 
-export default Home
+export default Home;

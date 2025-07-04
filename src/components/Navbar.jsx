@@ -24,7 +24,7 @@ const Navbar = () => {
        transition={{ ease: "easeIn", type:"tween", staggerChildren: 0.1, duration: 0.5, delayChildren: animationStart + 0.5}}
        className="flex items-center space-x-2">
         <motion.img variants={reveal} src="/assets/balance.png" className="h-6 w-auto" alt="Hafiz Legal Solutions Logo" />
-        <motion.span variants={reveal} className="text-lg font-semibold">Legalinks Law Firm</motion.span>
+        <motion.span variants={reveal} className="text-lg font-semibold">TaxLogicx Law Firm</motion.span>
       </motion.div>
       <motion.div
        variants={reveal}

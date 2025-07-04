@@ -1,96 +1,175 @@
 import React from 'react';
-import { MdEmail } from "react-icons/md";
-import { FaAddressBook } from "react-icons/fa6";
-import { IoCall } from "react-icons/io5";
-import {PageTitle} from './PageTitle';
-
+import { motion } from 'framer-motion';
+import { MdEmail, MdLocationOn } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { PageTitle } from './PageTitle';
 
 const ContactUs = () => {
   return (
-    <div id='contact' className="p-6 max-w-6xl mx-auto">
-      <PageTitle section="Contact Us" heading="Get in Touch with Us">
-        Whether you have questions, need support, or want to explore partnership opportunities, we are here to help. Complete the form below, and we'll get back to you within 24 hours.
-      </PageTitle>
-      <div className="lg:flex lg:gap-12">
-        {/* Contact Information on the Left */}
-        <div className="lg:w-5/12 mt-12 lg:mt-0 pt-90px">
-          <h3 className="text-xl font-semibold text-gray-700 mb-4">Contact Information</h3>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-                <MdEmail />
-              <p className="text-gray-700">hafiz.waseem@hotmail.com</p>
-            </div>
-            <div className="flex items-center space-x-3">
-              <IoCall />
-              <p className="text-gray-700">+92 321 8000208</p>
-            </div>
-            <div className="flex items-center space-x-3">
-              <FaAddressBook />
-              <p className="text-gray-700">5-A Kapoor Thallah House, Lake Road, Old Anarkali, Lahore</p>
-            </div>
-          </div>
-        </div>
-        
-        {/* Contact Form on the Right */}
-        <div className="lg:w-7/12">
-          <form className="w-full mt-12 space-y-8">
-            <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">
-              <div className="flex-1">
-                <label htmlFor="full-name" className="block text-gray-700 font-medium mb-2">Full Name</label>
-                <input
-                  id="full-name"
-                  type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your full name"
-                />
+    <section id='contact' className="py-16 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <PageTitle 
+          section="CONTACT US" 
+          heading="Get In Touch With Our Team"
+          className="text-center mb-16"
+        >
+          <p className="max-w-2xl mx-auto text-gray-600">
+            Have questions about our services or need legal advice? Reach out to our expert team for prompt assistance.
+          </p>
+        </PageTitle>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-5">
+          {/* Contact Information Card */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-xl shadow-lg p-8 h-fit"
+          >
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-blue-100 rounded-full text-blue-600">
+                  <MdEmail className="text-xl" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-gray-500">Email Address</h4>
+                  <a href="mailto:hafiz.waseem@hotmail.com" className="text-lg text-gray-800 hover:text-blue-600 transition-colors">
+                    hafiz.waseem@hotmail.com
+                  </a>
+                </div>
               </div>
-              <div className="flex-1">
-                <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email Address</label>
-                <input
-                  id="email"
-                  type="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your email address"
-                />
+
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-blue-100 rounded-full text-blue-600">
+                  <FaPhoneAlt className="text-xl" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-gray-500">Phone Number</h4>
+                  <a href="tel:+923218000208" className="text-lg text-gray-800 hover:text-blue-600 transition-colors">
+                    +92 321 8000208
+                  </a>
+                </div>
               </div>
-              {/* <input
+
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-blue-100 rounded-full text-blue-600">
+                  <MdLocationOn className="text-xl" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-gray-500">Office Address</h4>
+                  <p className="text-lg text-gray-800">
+                    5-A Kapoor Thallah House, Lake Road, Old Anarkali, Lahore
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <h4 className="text-lg font-medium text-gray-800 mb-4">Business Hours</h4>
+              <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+              <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+            </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-xl shadow-lg p-8"
+          >
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+            
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="full-name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  Subject
+                </label>
+                <input
                   id="subject"
                   type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Subject"
-                /> */}
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
-              <textarea
-                id="message"
-                rows="8"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Enter your message"
-              ></textarea>
-            </div>
-            <div className="flex items-center space-x-2">
-              <input
-                id="terms"
-                type="checkbox"
-                className="h-4 w-4 border-gray-300 rounded text-blue-600 focus:ring-blue-500"
-              />
-              <label htmlFor="terms" className="text-gray-600">
-                I agree to the{' '}
-                <a href="#" className="text-blue-600 hover:underline">Terms and Conditions</a>
-              </label>
-            </div>
-            <button
-              type="submit"
-              className="w-full py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition duration-300"
-            >
-              Send Message
-            </button>
-          </form>
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  placeholder="Regarding tax consultation"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Your Message <span className="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  placeholder="How can we help you?"
+                ></textarea>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex items-center h-5">
+                  <input
+                    id="terms"
+                    type="checkbox"
+                    required
+                    className="h-4 w-4 border-gray-300 rounded text-blue-600 focus:ring-blue-500"
+                  />
+                </div>
+                <div className="ml-3 text-sm">
+                  <label htmlFor="terms" className="text-gray-600">
+                    I agree to the{' '}
+                    <a href="#" className="text-blue-600 hover:underline font-medium">
+                      Terms and Conditions
+                    </a>
+                  </label>
+                </div>
+              </div>
+
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="submit"
+                className="w-full py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md"
+              >
+                Send Message
+              </motion.button>
+            </form>
+          </motion.div>
         </div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
 export default ContactUs;
