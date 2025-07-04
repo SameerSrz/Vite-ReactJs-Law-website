@@ -80,6 +80,7 @@ const Footer = ({ title, description, socials, menus, copyright }) => {
                   >
                     <a
                       href={item.path}
+                      target="_blank"
                       className="text-gray-400 hover:text-white transition-colors duration-300"
                     >
                       {item.name}
