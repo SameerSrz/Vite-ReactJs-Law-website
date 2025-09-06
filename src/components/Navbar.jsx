@@ -36,7 +36,7 @@ const Navbar = () => {
         <motion.a href='#home' variants={reveal} className='cursor-pointer font-semibold'>Home</motion.a>
         <motion.a href='#services' variants={reveal} className='cursor-pointer font-semibold'>Services</motion.a>
         <motion.a href='#about' variants={reveal} className='cursor-pointer font-semibold'>About Us</motion.a>
-        <motion.a href='#team' variants={reveal} className='cursor-pointer font-semibold'>Our Team</motion.a>
+        {/* <motion.a href='#team' variants={reveal} className='cursor-pointer font-semibold'>Our Team</motion.a> */}
         <motion.a href='#contact' variants={reveal} className='cursor-pointer font-semibold'>Contact Us</motion.a>
       </motion.div>
       <motion.div variants={reveal} className='flex gap-5px items-center cursor-pointer'>
@@ -66,9 +66,9 @@ const Navbar = () => {
             <li>
               <a href="#about" className="text-lg font-semibold" onClick={closeMenu}>About Us</a>
             </li>
-            <li>
+            {/* <li>
               <a href="#team" className="text-lg font-semibold" onClick={closeMenu}>Our Team</a>
-            </li>
+            </li> */}
             <li>
               <a href="#contact" className="text-lg font-semibold" onClick={closeMenu}>Contact Us</a>
             </li>

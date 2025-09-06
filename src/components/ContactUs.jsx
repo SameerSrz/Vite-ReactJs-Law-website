@@ -37,7 +37,7 @@ const ContactUs = () => {
                 <div>
                   <h4 className="text-sm font-medium text-gray-500">Email Address</h4>
                   <a href="mailto:hafiz.waseem@hotmail.com" className="text-lg text-gray-800 hover:text-blue-600 transition-colors">
-                    hafiz.waseem@hotmail.com
+                    hafiz.waseem@taxlogicx.com
                   </a>
                 </div>
               </div>
