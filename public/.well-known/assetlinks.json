@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sameersrz.taxlogicx",
+      "sha256_cert_fingerprints": [
+        "01:BF:20:F2:29:E4:73:DF:72:E4:37:E3:5C:39:8F:CC:58:DA:0A:C4:19:2B:C7:1A:A9:7D:38:01:C3:95:B5:76"
+      ]
+    }
+  }
+]
