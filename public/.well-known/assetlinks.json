@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.sameersrz.taxlogicx",
       "sha256_cert_fingerprints": [
-        "01:BF:20:F2:29:E4:73:DF:72:E4:37:E3:5C:39:8F:CC:58:DA:0A:C4:19:2B:C7:1A:A9:7D:38:01:C3:95:B5:76"
+        "01:BF:20:F2:29:E4:73:DF:72:E4:37:E3:5C:39:8F:CC:58:DA:0A:C4:19:2B:C7:1A:A9:7D:38:01:C3:95:B5:76",
+        "4B:3B:66:C5:6B:5B:5D:48:3E:46:4D:60:04:37:0C:06:19:89:F0:AD:FE:64:6D:4F:B4:E8:1C:D7:84:19:8E:40"
       ]
     }
   }
